@@ -1,0 +1,29 @@
+#services {
+    background-color: var(--gray-100);
+    padding-block: 120px;
+}
+#card {
+    grid-template-columns: repeat(3, 280px);
+}
+#card div{
+    border: 1px solid var(--gray-500);
+    border-radius: 12px;
+    padding: 20px;
+    
+    h3 {
+        font: var(--title-sm);
+        color: var(--gray-600);
+        padding-bottom: 8px;
+    }
+
+    p {
+        font: var(--text-sm);
+        color: var(--gray-500);
+    }
+
+    img {
+        width: 48px;
+        height: 48px;
+        margin-bottom: 20px;
+    }
+}

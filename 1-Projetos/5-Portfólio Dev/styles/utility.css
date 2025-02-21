@@ -1,0 +1,47 @@
+/* utility-first */
+
+header {
+    padding-block: 72px 56px;
+    
+    h3{
+        color: var(--red);
+        padding-bottom: 8px;
+    }
+}
+
+
+.grid {
+    display: grid;
+}
+
+.grid-flow-col {
+    grid-auto-flow: column;
+}
+
+.grid-cols-3 {
+    grid-template-columns: 330px 330px 330px;
+}
+
+.grid-justify-content {
+    justify-content: center;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-align {
+    align-items: center;
+}
+
+.flex-direction-column {
+    flex-direction: column;
+}
+
+.gap-16 {
+    gap: 16px;
+}
+
+.gap-24 {
+    gap: 24px;
+}
