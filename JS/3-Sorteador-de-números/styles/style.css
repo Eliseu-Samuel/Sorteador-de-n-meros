@@ -50,3 +50,19 @@
     --label-medium: Bold 1.25rem/1.5 var(--ff-roboto-flex);
     --label-small: Bold 1rem/1.5 var(--ff-roboto-flex);
 }
+
+body {
+    background-color: var(--background-secondary);
+    background-image: url(../assets/Background-Shapes.png);
+    background-size: auto;
+
+    color: var(--content-primary);
+    padding: 4.75rem 7.5rem 9.5625rem;
+}
+
+
+@media(width <= 24.375rem) {
+    body {
+        padding: 2.75rem 2.25rem;
+    }
+}
