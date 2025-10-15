@@ -70,5 +70,7 @@ h1 {
 @media(width <= 24.375rem) {
     body {
         padding: 2.75rem 2.25rem;
+        display: grid;
+        justify-content: center;
     }
 }

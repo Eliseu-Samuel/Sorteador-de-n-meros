@@ -12,13 +12,12 @@
 header {
     margin-left: .875rem;
     margin-top: 5.5625rem;
-
+    display: grid;
+    gap: .75rem;
 
     & small {
         font: var(--overline);
         color: var(--content-secondary);
-        display: inline-block;
-        margin-bottom: 12px;
     }
 }
 
@@ -27,6 +26,8 @@ header {
     display: grid;
     gap: 2.25rem;
     margin-top: 2.25rem;
+
+    width: 24.125rem;
 }
 
 .questions .question-style{
@@ -50,5 +51,19 @@ header {
     .logo{
         display: flex;
         justify-content: center;
+    }
+
+    header {
+        margin-top: 2.875rem;
+        margin-left: 0;
+        display: grid;
+        gap: .5rem;
+        & h1 {
+            font: var(--display-medium);
+        }
+    }
+
+    .questions {
+        width: 19.9375rem;
     }
 }
