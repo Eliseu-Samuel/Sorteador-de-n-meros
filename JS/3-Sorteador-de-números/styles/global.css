@@ -72,6 +72,24 @@ header {
     }
 }
 
+.style-input {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+}
+
+.style-input div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: .5rem;
+
+    & label {
+        color: var(--content-secondary);
+        font: var(--label-small);
+    }    
+}
+
 
 @media (width <= 24.375rem) {
     .logo{
