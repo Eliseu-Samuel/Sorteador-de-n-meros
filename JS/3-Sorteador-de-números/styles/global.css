@@ -13,11 +13,35 @@ header {
     margin-left: .875rem;
     margin-top: 5.5625rem;
 
+
     & small {
         font: var(--overline);
         color: var(--content-secondary);
         display: inline-block;
         margin-bottom: 12px;
+    }
+}
+
+.questions {
+    text-transform: none;
+    display: grid;
+    gap: 2.25rem;
+    margin-top: 2.25rem;
+}
+
+.questions .question-style{
+    display: flex;
+    align-items: flex-start;
+    gap: .5rem;
+
+    & span small{
+        color: var(--content-brand);
+        font: var(--paragraph-medium);
+    }
+
+    & span p {
+        color: var(--content-secondary);
+        font: var(--paragraph-small);
     }
 }
 

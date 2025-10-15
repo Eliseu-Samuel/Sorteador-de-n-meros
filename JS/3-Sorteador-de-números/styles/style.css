@@ -44,9 +44,9 @@
 
     /* Roboto flex */
     --ff-roboto-flex: "Roboto Flex", sans-serif;
-    --paragraph-large: Medium 1rem/1.5 var(--ff-roboto-flex);
-    --paragraph-medium: Medium .875rem/1.5 var(--ff-roboto-flex);
-    --paragraph-small: Medium .75rem/1.5 var(--ff-roboto-flex);
+    --paragraph-large: 500 1rem/1.5 var(--ff-roboto-flex);
+    --paragraph-medium: 500 .875rem/1.5 var(--ff-roboto-flex);
+    --paragraph-small: 500 .75rem/1.5 var(--ff-roboto-flex);
     --label-medium: Bold 1.25rem/1.5 var(--ff-roboto-flex);
     --label-small: Bold 1rem/1.5 var(--ff-roboto-flex);
 }
