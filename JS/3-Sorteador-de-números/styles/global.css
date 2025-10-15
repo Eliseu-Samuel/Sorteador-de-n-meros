@@ -1,4 +1,4 @@
-header {
+.logo {
     display: flex;
     gap: .6875rem;
     align-items: center;
@@ -9,9 +9,21 @@ header {
     }
 }
 
+header {
+    margin-left: .875rem;
+    margin-top: 5.5625rem;
+
+    & small {
+        font: var(--overline);
+        color: var(--content-secondary);
+        display: inline-block;
+        margin-bottom: 12px;
+    }
+}
+
 
 @media (width <= 24.375rem) {
-    header{
+    .logo{
         display: flex;
         justify-content: center;
     }
