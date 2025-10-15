@@ -1,3 +1,9 @@
+main {
+    display: flex;
+    align-items: center;
+    gap: 6.75rem;
+}
+
 .logo {
     display: flex;
     gap: .6875rem;
@@ -44,6 +50,10 @@ header {
         color: var(--content-secondary);
         font: var(--paragraph-small);
     }
+}
+
+.header-form {
+
 }
 
 
