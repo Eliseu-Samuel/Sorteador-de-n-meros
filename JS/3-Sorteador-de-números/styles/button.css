@@ -19,3 +19,9 @@ button {
 button:hover {
     border: 1px  solid var(--gradient-border);
 }
+
+@media (width <= 24.375rem){
+    button {
+        width: 19.9375rem;
+    }
+}
