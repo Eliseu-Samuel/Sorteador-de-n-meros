@@ -52,8 +52,24 @@ header {
     }
 }
 
-.header-form {
+.content-form {
+    width: 30.125rem;
+    display: grid;
+    gap: 2.5rem;
+}
 
+.header-form {
+    & strong{
+        text-transform: uppercase;
+        font: var(--label-medium);
+        color: var(--content-primary);
+    }
+
+    & p {
+        text-transform: none;
+        font: var(--paragraph-large);
+        color: var(--content-secondary);
+    }
 }
 
 

@@ -60,6 +60,8 @@ body {
     padding: 4.75rem 7.5rem 9.5625rem;
 
     text-transform: uppercase;
+    display: grid;
+    justify-content: center;
 }
 
 h1 {
