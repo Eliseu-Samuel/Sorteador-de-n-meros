@@ -1,15 +1,57 @@
-input[type="text"] {
-    width: 5.375rem;
-    padding: .25rem .5rem;
-    background-color: var(--background-secondary);
-    color: var(--content-primary);
-
-    border: none;
-    border-radius: .5rem;
-
-    font: var(--display-small);
-    text-align: center;
+.gradient-border {
+  display: inline-block;
+  padding: 1.5px;
+  border-radius: .5rem;
+  background: transparent;
+  transition: background 1s ease;
 }
+
+.gradient-border input {
+  background: var(--background-secondary);
+  color: var(--content-primary);
+  border: none;
+  border-radius: .5rem;
+  padding: 4px 8px;
+  text-align: center;
+  outline: none;
+  width: 5.375rem;
+
+  font: var(--display-small);
+  transition: background 1s ease;
+}
+
+.input-wrapper:hover {
+
+  & .gradient-border{
+    background: var(--gradient-border);
+
+    & input {
+      background: var(--background-tertiary);
+    }
+  }
+
+  & label{
+    color: var(--content-brand);
+  }
+}
+
+
+
+.input-wrapper:has(input:focus) {
+  & .gradient-border{
+      background: var(--gradient-border);
+      padding: 2px;
+    & input {
+      background: var(--background-tertiary);
+    }
+  }
+
+  & label {
+    color: var(--content-brand);
+  }
+}
+
+
 
 .checkbox{
     margin-top: 1.25rem;
