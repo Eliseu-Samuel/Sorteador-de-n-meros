@@ -91,6 +91,8 @@ header {
 }
 
 
+
+
 @media (width <= 24.375rem) {
     .logo{
         display: flex;

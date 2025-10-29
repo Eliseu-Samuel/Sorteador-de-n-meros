@@ -49,6 +49,10 @@
     --paragraph-small: 500 .75rem/1.5 var(--ff-roboto-flex);
     --label-medium: Bold 1.25rem/1.5 var(--ff-roboto-flex);
     --label-small: Bold 1rem/1.5 var(--ff-roboto-flex);
+
+    /* Inter */
+    --ff-inter: "Inter", sans-serif;
+    --inter-medium: 500 .75rem/150 var(--ff-inter);
 }
 
 body {
