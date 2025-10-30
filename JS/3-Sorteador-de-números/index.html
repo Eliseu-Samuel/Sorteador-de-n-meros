@@ -46,46 +46,64 @@
         </section>
 
         <section class="content-form">
-            <div class="header-form">
-                <strong>Quero sortear:</strong>
-                <p>defina o intervalo e a quantidade de números, clique em "Sortear" e veja os resultados na tela. É rápido e fácil!</p>
+            <div class="hide">
+                <div class="header-form">
+                    <strong>Quero sortear:</strong>
+                    <p>defina o intervalo e a quantidade de números, clique em "Sortear" e veja os resultados na tela. É rápido e fácil!</p>
+                </div>
+
+                <form action="">
+                    <div class="style-input">
+                        <div class="input-wrapper">
+                            <label for="">números</label>
+                            <div class="gradient-border">
+                                <input type="text">
+                            </div>
+                        </div>
+
+                        <div class="input-wrapper">
+                            <label for="">de</label>
+                            <div class="gradient-border">
+                                <input type="text">
+                            </div>
+                        </div>
+
+                        <div class="input-wrapper">
+                            <label for="">de</label>
+                            <div class="gradient-border">
+                                <input type="text">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="checkbox">
+                        <div class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </div>
+                        <p>Não repetir número</p>
+                    </div>
+                </form>
+                <div class=".style-button">
+                    <button>SORTEAR <img src="assets/Rigth-row.svg" alt=""></button>
+                </div>
             </div>
 
-            <form action="">
-                <div class="style-input">
-                    <div class="input-wrapper">
-                        <label for="">números</label>
-                        <div class="gradient-border">
-                            <input type="text">
-                        </div>
-                    </div>
-
-                    <div class="input-wrapper">
-                        <label for="">de</label>
-                        <div class="gradient-border">
-                            <input type="text">
-                        </div>
-                    </div>
-
-                    <div class="input-wrapper">
-                        <label for="">de</label>
-                        <div class="gradient-border">
-                            <input type="text">
-                        </div>
-                    </div>
+            <div class="show-result">
+                <div class="title">
+                    <h2>Resultado do sorteio</h2>
+                    <strong>1º Resultado</strong>
                 </div>
 
-                <div class="checkbox">
-                    <div class="switch">
-                        <input type="checkbox">
-                        <span class="slider"></span>
-                    </div>
-                    <p>Não repetir número</p>
+                <div class="animation-result">
+                    <span>23</span>
+                    <span>12</span>
                 </div>
 
-                
-            </form>
-            <button>SORTEAR <img src="assets/Rigth-row.svg" alt=""></button>
+                <div class="style-button">
+                    <button>SORTEAR NOVAMENTE <img src="assets/Rotation-icon.svg" alt=""></button>
+                </div>  
+            </div>
         </section>
     </main>
 

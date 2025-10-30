@@ -1,0 +1,15 @@
+.hide {
+    display: none;
+}
+
+.show {
+    display: initial;
+}
+
+.flex {
+    display: flex;
+}
+
+.gap-4 {
+    gap: 4px;
+}

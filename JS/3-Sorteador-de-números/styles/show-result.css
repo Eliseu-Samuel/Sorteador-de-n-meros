@@ -1,0 +1,19 @@
+.show-result {
+    text-align: center;
+}
+
+.show-result .title{
+    font: var(--label-small);
+}
+
+.show-result .title strong {
+    font: var(--overline);
+    color: var(--content-secondary);
+}
+
+.animation-result {
+    font: var(--overline);
+    font-size: 3rem;
+    color: var(--content-brand);
+    margin-block: 2.5rem;
+}
