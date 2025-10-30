@@ -1,0 +1,60 @@
+.checkbox{
+    margin-top: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+
+    & p{
+        font: var(--paragraph-small);
+    }
+}
+
+.switch {
+    width: 1.875rem;
+    height: 1.25rem;
+    position: relative;
+    display: inline-block;
+    font-size: 10px;
+}
+
+/* Fizemos o input desaparecer para colocar o botão em cima dele */
+.switch input{
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.slider{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--content-tertiary);
+    transition: background .4s ease, transform .4s ease;
+    border-radius: 1rem;
+}
+
+.slider::before {
+    position: absolute;
+    content: "";
+    height: .9375rem;
+    width: .9375rem;
+    border-radius: 1rem;
+    left: 3px;
+    top: 3px;
+    bottom: 3px;
+    background: var(--content-primary);
+    transition: .4s ease;
+}
+
+.switch input:checked + .slider {
+    background: var(--gradient-background);
+}
+
+.switch input:checked + .slider::before {
+    transform: translateX(10px);
+}

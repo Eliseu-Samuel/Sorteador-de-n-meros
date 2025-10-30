@@ -50,17 +50,3 @@
     color: var(--content-brand);
   }
 }
-
-
-
-.checkbox{
-    margin-top: 1.25rem;
-
-    display: flex;
-    align-items: center;
-    gap: .5rem;
-
-    & span{
-        font: var(--paragraph-small);
-    }
-}
