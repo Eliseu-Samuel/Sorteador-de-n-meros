@@ -1,23 +1,40 @@
-button {
-    width: 100%;
-    padding-block: 1rem;
-
-    border: none;
+.style-button {
+    position: relative;
+    padding: 1.5px;
     border-radius: .5rem;
+    background: transparent;
+    overflow: hidden;
+}  
 
+.style-button button {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: .5rem;
-
+    
+    width: 100%;
+    padding-block: 1rem;
+    
     background-color: var(--background-tertiary);
     color: var(--content-primary);
+    
+    border: none;
+    border-radius: .5rem;
+    outline: none;
 
     font: var(--label-small);
+    transition: .4s ease;
 }
 
-button:hover {
-    border: 1px  solid var(--gradient-border);
+
+
+
+.style-button:hover {
+    background: var(--gradient-border);
+    
+    & button:hover {
+        background-color: var(--background-secondary);
+    }
 }
 
 @media (width <= 24.375rem){
