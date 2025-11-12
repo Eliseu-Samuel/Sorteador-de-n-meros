@@ -1,0 +1,33 @@
+.style-button:hover img[src="assets/Rotation-icon.svg"] {
+    animation: rotateImg 2s forwards;
+}
+
+.style-button:hover img[src="assets/Rigth-row.svg"] {
+    animation: moveImg 2s forwards;
+}
+
+
+/* Animation button */
+@keyframes rotateImg{
+    0% {
+        transform: rotate(0deg);
+    }
+    
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes moveImg {
+    0% {
+        transform: translateX(0px);
+    }
+
+    50% {
+        transform: translateX(20px);
+    }
+
+    100% {
+        transform: translate(0px);
+    }
+}
