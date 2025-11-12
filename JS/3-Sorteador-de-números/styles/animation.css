@@ -1,0 +1,91 @@
+.animation-result {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.animation {
+    position: relative;
+    width: 6.25rem;
+    height: 6.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* fundo que gira */
+.rotating-bg {
+    position: absolute;
+    inset: 0;
+    background-color: var(--content-brand);
+    border-radius: 1rem;
+    animation: giro 5s ease forwards;
+    z-index: 0;
+}
+
+/* texto fixo */
+.animation span {
+    position: relative;
+    z-index: 1;
+    color: transparent;
+    animation: textColor 5s ease forwards;
+}
+
+/* Aqui fizemos desaparecer toda segunda div-animation por 5 segundos*/
+.animation-result .animation:nth-child(2) {
+    opacity: 0;
+    animation: showSecond 0.01s forwards;
+    animation-delay: 5s;
+}
+
+/* Como as animações de giro de mudança de cor do texto não está na div, colocamos um delay nos elementos para ele esperar a primeira animação, e executar direito */
+.animation-result .animation:nth-child(2) .rotating-bg,
+.animation-result .animation:nth-child(2) span {
+    animation-delay: 5s; /* espera a primeira terminar */
+}
+
+/* Faz a segunda div aparecer */
+@keyframes showSecond {
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+@keyframes giro {
+    0% {
+      transform: scale(0) rotate(0deg);
+      opacity: 1;
+    }
+    20% {
+      transform: scale(1.1) rotate(0deg);
+      opacity: 1;
+    }
+    80%,90% {
+      transform: scale(1.1) rotate(360deg);
+      opacity: 1; /* ainda visível até aqui */
+    }
+    100% {
+      transform: scale(1) rotate(360deg);
+      opacity: 0; /* só agora começa a desaparecer */
+    }
+}
+
+/* cor do texto ao longo do tempo */
+@keyframes textColor {
+  0%, 39% {
+    color: transparent;
+  }
+
+  40%, 90%{
+    color: var(--color-inverse);
+    font-size: 5rem;
+  }
+
+  100% {
+    color: var(--content-brand);
+    font-size: 3rem;
+  }
+}
