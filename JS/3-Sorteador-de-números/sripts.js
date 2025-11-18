@@ -4,6 +4,10 @@ const maxValue = document.getElementById("maxValue")
 const form = document.querySelector("form")
 const checkBox = document.getElementById("repeatValue")
 
+const formSection = document.querySelector(".content-form-inputs")
+const resultBox = document.querySelector(".show-result")
+
+const btnNovamente = document.querySelector(".sortearDenovo")
 //Capturando os valores numéricos dos formulários 
 function getInputsValues (input) {
     input.addEventListener("input", () => {
@@ -46,4 +50,20 @@ form.addEventListener("submit", (e) => {
     let valorMax = Number(maxValue.value)
 
     console.log(sorteador(quantidade, valorMin, valorMax))
+
+    //esconde a div dos inputs
+    formSection.classList.add("hide")
+
+    //mostra a div dos resultados
+    resultBox.classList.remove("hide")
+
+    quantity.value = ""
+    minValue.value = ""
+    maxValue.value = ""
+})
+
+
+btnNovamente.addEventListener("click", () => {
+    resultBox.classList.add("hide")
+    formSection.classList.remove("hide")
 })
