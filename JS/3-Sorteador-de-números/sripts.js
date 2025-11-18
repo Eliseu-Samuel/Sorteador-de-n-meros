@@ -1,6 +1,6 @@
 const quantity = document.getElementById("quantity")
-const firstNumberInterval = document.getElementById("firstInterval")
-const lastNumberInterval = document.getElementById("lastNumberInterval")
+const minValue = document.getElementById("minValue")
+const maxValue = document.getElementById("maxValue")
 const form = document.querySelector("form")
 
 //Capturando os valores numéricos dos formulários 
@@ -11,17 +11,35 @@ function getInputsValues (input) {
 
 }
 
+function sorteador(quantidade, valorMin, valorMax){
+    let listValue = [] 
+    for(let i = 0; i < quantidade; i++){
+        let valorSorteado = Math.floor(Math.random() * (valorMax - valorMin + 1)) + valorMin
+        
+        //Evita valores repetido
+        if(listValue.includes(valorSorteado)){
+            i--
+            continue
+        }
+
+        //adiciona valor na lista
+        listValue.push(valorSorteado)
+    }
+
+    return listValue
+}
+
 
 getInputsValues(quantity)
-getInputsValues(firstNumberInterval)
-getInputsValues(lastNumberInterval)
+getInputsValues(minValue)
+getInputsValues(maxValue)
 
 form.addEventListener("submit", (e) => {
     e.preventDefault()
 
     let quantidade = Number(quantity.value)
-    let primeiroValor = Number(firstNumberInterval.value)
-    let ultimoValor = Number(lastNumberInterval.value)
+    let valorMin = Number(minValue.value)
+    let valorMax = Number(maxValue.value)
 
-    console.log(quantidade, primeiroValor, ultimoValor)
+    console.log(sorteador(quantidade, valorMin, valorMax))
 })
