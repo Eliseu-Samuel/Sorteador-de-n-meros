@@ -2,6 +2,7 @@ const quantity = document.getElementById("quantity")
 const minValue = document.getElementById("minValue")
 const maxValue = document.getElementById("maxValue")
 const form = document.querySelector("form")
+const checkBox = document.getElementById("repeatValue")
 
 //Capturando os valores numéricos dos formulários 
 function getInputsValues (input) {
@@ -16,11 +17,14 @@ function sorteador(quantidade, valorMin, valorMax){
     for(let i = 0; i < quantidade; i++){
         let valorSorteado = Math.floor(Math.random() * (valorMax - valorMin + 1)) + valorMin
         
-        //Evita valores repetido
-        if(listValue.includes(valorSorteado)){
-            i--
-            continue
+        //Evita valores repetido se a checkbox estiver ativa
+        if(checkBox.checked){
+            if(listValue.includes(valorSorteado)){
+                i--
+                continue
+            }            
         }
+
 
         //adiciona valor na lista
         listValue.push(valorSorteado)
