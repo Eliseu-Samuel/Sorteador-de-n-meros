@@ -32,25 +32,6 @@
     animation: textColor 5s ease forwards;
 }
 
-/* Aqui fizemos desaparecer toda segunda div-animation por 5 segundos*/
-.animation-result .animation:nth-child(2) {
-    opacity: 0;
-    animation: showSecond 0.01s forwards;
-    animation-delay: 5s;
-}
-
-/* Como as animações de giro de mudança de cor do texto não está na div, colocamos um delay nos elementos para ele esperar a primeira animação, e executar direito */
-.animation-result .animation:nth-child(2) .rotating-bg,
-.animation-result .animation:nth-child(2) span {
-    animation-delay: 5s; /* espera a primeira terminar */
-}
-
-/* Faz a segunda div aparecer */
-@keyframes showSecond {
-    to {
-        opacity: 1;
-    }
-}
 
 
 @keyframes giro {
