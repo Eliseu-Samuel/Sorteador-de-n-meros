@@ -76,10 +76,16 @@ form.addEventListener("submit", (e) => {
     mostrarValor(listaDeNumeros)
 
     //esconde a div dos inputs
-    formSection.classList.add("hide")
+    formSection.classList.add("hide-animation")
 
     //mostra a div dos resultados
-    resultBox.classList.remove("hide")
+    setTimeout(() => {
+
+        formSection.classList.add("hide")
+
+        resultBox.classList.remove("hide")
+        resultBox.classList.add("show-animation")
+    }, 300)
 
     quantity.value = ""
     minValue.value = ""
@@ -88,8 +94,17 @@ form.addEventListener("submit", (e) => {
 
 
 btnNovamente.addEventListener("click", () => {
-    resultBox.classList.add("hide")
-    formSection.classList.remove("hide")
+
+    //Faz a caixa de resultador desaparecer com animação
+    resultBox.classList.add("hide-animation")
+    
+    setTimeout(() => {
+        resultBox.classList.add("hide")
+        resultBox.classList.remove("show-animation")
+
+        formSection.classList.remove("hide")
+        formSection.classList.add("show-animation")
+    }, 300)
 
     animationContainer.innerHTML = " "
 })
