@@ -3,6 +3,7 @@
     align-items: center;
     justify-content: center;
     gap: 1rem;
+    /* Adiciona quebra de linha para os resultados não ficar tudo na mesma linha */
     flex-wrap: wrap;
 }
 
